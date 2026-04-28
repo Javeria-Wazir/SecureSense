@@ -1,0 +1,24 @@
+# Dependency directories
+node_modules/
+
+# Environment variables (Crucial for Security!)
+.env
+
+# Database files
+database.sqlite
+*.db
+*.sqlite
+
+# Logs
+access.log
+security.log
+*.log
+
+# OS and IDE files
+.DS_Store
+.vscode/
+.idea/
+
+# Virtual Machine files
+*.vdi
+*.vbox
