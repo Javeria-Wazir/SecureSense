@@ -24,7 +24,7 @@ const winston = require('winston');
 const logger = winston.createLogger({
   transports: [
     new winston.transports.Console(),
-    //new winston.transports.File({ filename: 'security.log' })
+    new winston.transports.File({ filename: 'security.log' })
   ]
 });
 logger.info('Application started');
@@ -98,19 +98,19 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 3000;
-/*console.log('syncing database...');
+console.log('syncing database...');
 // Sync database and start server
 sequelize.sync({ alter: true }) // Uses alter: true to update the database schema with new columns (like 'role')
   .then(() => {
-    console.log('Database synced successfully.');*/
+    console.log('Database synced successfully.');
     app.listen(PORT, () => {
       console.log(`Server is running on http://localhost:${PORT}`);
     });
-  
- /* 
+  })
+ 
   .catch(err => {
     console.error('Unable to connect to the database:', err);
   });
 
 setInterval(() => {}, 10000); // keep event loop alive
-*/
+
